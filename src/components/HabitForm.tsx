@@ -12,6 +12,12 @@ export function HabitForm({ onAdd }: HabitFormProps) {
         type="text"
         value={draft}
         onChange={(e) => setDraft(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            onAdd(draft);
+            setDraft("");
+          }
+        }}
       />
       <button
         className="px-4 py-2 rounded-lg bg-emerald-600 text-white font-medium text-sm hover:bg-emerald-500 transition-colors"

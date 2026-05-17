@@ -36,7 +36,11 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-900 p-8">
       <h1 className="text-4xl font-bold text-white">Habit Tracker</h1>
-      <p className="text-white text-2xl">{habits.length} habits tracked</p>
+      <p className="text-white text-2xl mb-2">
+        {habits.length === 0
+          ? "No Habits yet"
+          : habits.length + " habits tracked"}
+      </p>
       <HabitDashboard
         habits={habits}
         onAdd={handleAdd}
