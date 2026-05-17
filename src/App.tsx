@@ -34,7 +34,7 @@ function App() {
     );
   };
   return (
-    <div className="min-h-screen bg-gray-500 p-8">
+    <div className="min-h-screen bg-slate-900 p-8">
       <h1 className="text-4xl font-bold text-white">Habit Tracker</h1>
       <p className="text-gray-400">{habits.length} habits tracked</p>
       <HabitDashboard
