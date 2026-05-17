@@ -16,15 +16,13 @@ export function HabitDashboard({
   onDelete,
 }: HabitDashboardProps) {
   return (
-    <div className="bg-red-600">
+    <div className="">
       <HabitForm onAdd={onAdd}></HabitForm>
-      <ul className="text-white space-y-1">
-        <HabitList
-          habits={habits}
-          onComplete={onComplete}
-          onDelete={onDelete}
-        ></HabitList>
-      </ul>
+      <HabitList
+        habits={habits}
+        onComplete={onComplete}
+        onDelete={onDelete}
+      ></HabitList>
     </div>
   );
 }

@@ -9,7 +9,7 @@ type HabitListProps = {
 
 export function HabitList({ habits, onDelete, onComplete }: HabitListProps) {
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
       {habits.map((habit) => (
         <HabitCard
           key={habit.id}
